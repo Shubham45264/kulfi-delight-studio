@@ -101,12 +101,12 @@ export const heroSlides = [
 ];
 
 export const bestSellers = [
-  { name: "Mawa Malai Kulfi", category: "Candy Kulfi", image: pMalaiKulfi },
-  { name: "Gulkand Kulfi", category: "Candy Kulfi", image: pGulkandKulfiPink },
-  { name: "Rabdi Falooda", category: "Falooda", image: pFaloodaCentered },
-  { name: "Belgian Chocolate", category: "Premium Ice Cream", image: pChocoCup },
-  { name: "Oreo Milkshake", category: "Milkshakes", image: pOreoShake },
-  { name: "Tiramisu Cold Coffee", category: "Cold Coffee", image: pTiramisuCoffee },
+  { name: "Mawa Malai Kulfi", category: "Candy Kulfi", image: pMalaiKulfi, price: "₹60" },
+  { name: "Gulkand Kulfi", category: "Candy Kulfi", image: pGulkandKulfiPink, price: "₹70" },
+  { name: "Rabdi Falooda", category: "Falooda", image: pFaloodaCentered, price: "₹120" },
+  { name: "Belgian Chocolate", category: "Premium Ice Cream", image: pChocoCup, price: "₹150" },
+  { name: "Oreo Milkshake", category: "Milkshakes", image: pOreoShake, price: "₹130" },
+  { name: "Tiramisu Cold Coffee", category: "Cold Coffee", image: pTiramisuCoffee, price: "₹90" },
 ];
 
 export const flavours = [

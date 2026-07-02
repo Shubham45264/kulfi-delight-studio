@@ -32,3 +32,8 @@ dist-ssr
 *.sw?
 .node/
 
+# Python / Backend
+.env
+venv/
+__pycache__/
+*.pyc

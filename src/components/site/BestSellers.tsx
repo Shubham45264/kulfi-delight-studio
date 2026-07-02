@@ -41,7 +41,7 @@ export default function BestSellers() {
                   <div className="text-[11px] uppercase tracking-wider text-muted-foreground">{p.category}</div>
                   <h3 className="truncate font-display text-lg font-semibold">{p.name}</h3>
                 </div>
-                <div className="rounded-full bg-secondary px-3 py-1.5 text-sm font-bold text-primary">{p.price}</div>
+
               </div>
             </motion.div>
           ))}

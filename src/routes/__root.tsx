@@ -10,6 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import KulfiChatBot from "../components/site/KulfiChatBot";
 
 function NotFoundComponent() {
   return (
@@ -102,6 +103,7 @@ function RootShell({ children }: { children: ReactNode }) {
       </head>
       <body>
         {children}
+        <KulfiChatBot />
         <Scripts />
       </body>
     </html>
