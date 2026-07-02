@@ -1,0 +1,129 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@font-face {
+  font-family: 'BakeryRoast';
+  src: url('./components/BakeryRoastDemoRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-pista: var(--pista);
+  --color-mango: var(--mango);
+  --color-rose: var(--rose);
+  --color-cocoa: var(--cocoa);
+  --color-cream: var(--cream);
+  --font-display: "Fraunces", "Playfair Display", Georgia, serif;
+  --font-sans: "Manrope", "Inter", system-ui, sans-serif;
+  --font-brand: "BakeryRoast", serif;
+}
+
+:root {
+  --radius: 1rem;
+  --background: oklch(0.985 0.012 80);          /* warm cream */
+  --foreground: oklch(0.24 0.04 30);            /* deep cocoa */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.04 30);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.04 30);
+  --primary: oklch(0.62 0.17 18);               /* rose pink */
+  --primary-foreground: oklch(0.99 0.01 80);
+  --secondary: oklch(0.93 0.05 75);             /* soft cream */
+  --secondary-foreground: oklch(0.24 0.04 30);
+  --muted: oklch(0.95 0.025 75);
+  --muted-foreground: oklch(0.45 0.04 40);
+  --accent: oklch(0.84 0.13 95);                /* mango */
+  --accent-foreground: oklch(0.24 0.04 30);
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(0.99 0.01 80);
+  --border: oklch(0.9 0.025 75);
+  --input: oklch(0.9 0.025 75);
+  --ring: oklch(0.62 0.17 18);
+
+  --pista: oklch(0.82 0.11 145);
+  --mango: oklch(0.86 0.16 90);
+  --rose:  oklch(0.78 0.13 18);
+  --cocoa: oklch(0.32 0.06 45);
+  --cream: oklch(0.97 0.025 85);
+
+  --gradient-warm: linear-gradient(135deg, oklch(0.95 0.05 75), oklch(0.88 0.1 25));
+  --gradient-hero: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.6) 100%);
+  --shadow-soft: 0 20px 50px -20px oklch(0.32 0.06 45 / 0.35);
+  --shadow-glow: 0 10px 40px -10px oklch(0.62 0.17 18 / 0.45);
+}
+
+.dark {
+  --background: oklch(0.16 0.02 30);
+  --foreground: oklch(0.97 0.02 80);
+  --card: oklch(0.22 0.03 30);
+  --card-foreground: oklch(0.97 0.02 80);
+  --popover: oklch(0.22 0.03 30);
+  --popover-foreground: oklch(0.97 0.02 80);
+  --primary: oklch(0.72 0.17 18);
+  --primary-foreground: oklch(0.16 0.02 30);
+  --secondary: oklch(0.28 0.04 35);
+  --secondary-foreground: oklch(0.97 0.02 80);
+  --muted: oklch(0.28 0.04 35);
+  --muted-foreground: oklch(0.75 0.03 70);
+  --accent: oklch(0.78 0.14 90);
+  --accent-foreground: oklch(0.16 0.02 30);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+}
+
+@utility text-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
